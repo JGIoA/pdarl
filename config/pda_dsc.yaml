@@ -1,0 +1,31 @@
+# PDA_DSC (discretized action optimization)
+exp_name: "pda_dsc"
+agent_name: "PDA_DSC"
+seed: 0
+torch_deterministic: false
+device: "cpu"
+logging: true
+
+env_id: "LunarLander-v3"
+env_kargs: null
+
+total_timesteps: 1000000
+learning_rate: 0.001
+num_envs: 10
+num_test_envs: 10
+test_interval: 5
+num_steps: 400
+anneal_lr: false
+gamma: 0.99
+gae_lambda: 0.95
+num_minibatches: 4
+update_epochs: 10
+hidden_sizes: [64, 64]
+obs_norm: true
+max_grad_norm: 0.5
+ret_norm: true
+adv_norm: true
+recompute_ret: true
+
+step_size: 0.9
+act_noise: 0.5

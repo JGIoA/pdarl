@@ -1,0 +1,48 @@
+# PDA_ACT (continuous actor-gradient variant)
+exp_name: "pda_act_continuous"
+agent_name: "PDA_ACT"
+seed: 0
+torch_deterministic: false
+device: "cpu"
+track: false
+wandb_project_name: "PDA_ACT"
+wandb_entity: null
+capture_video: false
+save_model: false
+logging: true
+
+env_id: "HalfCheetah-v4"
+# env_kargs: {"continuous": true}
+env_kargs: null
+
+total_timesteps: 1000000
+learning_rate: 0.001
+num_envs: 10
+num_test_envs: 10
+test_interval: 5
+num_steps: 400
+anneal_lr: false
+gamma: 0.99
+gae_lambda: 0.95
+num_minibatches: 4
+update_epochs: 10
+hidden_sizes: [64, 64]
+activation: "Tanh"
+obs_norm: true
+max_grad_norm: 0.1
+ret_norm: true
+adv_norm: true
+recompute_ret: true
+
+step_size: 0.5
+act_noise: 1.3
+action_opt: null
+action_opt_itr: null
+action_opt_params: null
+discretization: null
+
+# to be filled in runtime
+batch_size: 0
+minibatch_size: 0
+num_iterations: 0
+
