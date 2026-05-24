@@ -6,9 +6,9 @@
 
 Policy Dual Averaging (PDA) is an on-policy reinforcement learning algorithm with theoretical guarantees and competitive empirical performance. This package is a lightweight PyTorch implementation of PDA and actor-accelerated PDA for problems with discrete and continuous action space. The environment wrappers and on-policy training loops are adapted from [**CleanRL**](https://github.com/vwxyzjn/cleanrl) and [**Tianshou**](https://github.com/thu-ml/tianshou). We use [**Gymnasium**](https://gymnasium.farama.org) for environment simulation. 
 
-<!-- We also have implementation in [**Tianshou**] (*V1.2.0*) for benchmarking, and [**CleanRL**] for single-file RL.  -->
+We also have implementation in [**Tianshou**](https://github.com/JGIoA/pda-tianshou) (*V1.2.0*) for benchmarking, and in a [**CleanRL-style single-file layout**](https://github.com/JGIoA/pdarl/tree/main/cleanrl_pda).
 
-The algorithm is based on paper [**Actor-Accelerated Policy Dual Averaging for Reinforcement Learning in Continuous Action Spaces**](https://arxiv.org/abs/2603.10199), and [**Policy Optimization over General State and Action Spaces**](https://arxiv.org/abs/2211.16715). 
+The implementation follows [**Actor-Accelerated Policy Dual Averaging for Reinforcement Learning in Continuous Action Spaces**](https://arxiv.org/abs/2603.10199), and [**Policy Optimization over General State and Action Spaces**](https://arxiv.org/abs/2211.16715). 
 
 ## PDA
 
