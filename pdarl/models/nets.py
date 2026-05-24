@@ -50,7 +50,7 @@ class ActorNetwork(nn.Module):
     ):
         super().__init__()
         self.network = _build_mlp(obs_dim, act_dim, hidden_sizes, activation=activation)
-        self.network.append(activation)
+        self.network.append(nn.Tanh())
         self.act_lims = act_lims
 
     def map_action(self, action: torch.Tensor) -> torch.Tensor:

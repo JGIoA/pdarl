@@ -75,7 +75,6 @@ class PDA_BASE(nn.Module):
         self.optimSumAdv = SOAP(self.SumAdv.parameters(), lr=args.learning_rate)
         self.optimActor = SOAP(self.actor_model.parameters(), lr=args.learning_rate) if self.actor_model is not None else None
 
-        # Keep Environment/Trainer contract untouched: agent.Actor(obs), agent.Actor.map_action(action).
         self.Actor = _ActorAdapter(self.compute_act, self.act_lims)
 
     def compute_act(self, obs: torch.Tensor | np.ndarray) -> torch.Tensor:

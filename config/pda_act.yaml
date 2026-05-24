@@ -6,7 +6,7 @@ torch_deterministic: false
 device: "cpu"
 logging: true
 
-env_id: "BipedalWalker-v3"
+env_id: "HalfCheetah-v4"
 # env_kargs: {"continuous": true}
 env_kargs: null
 

@@ -99,6 +99,8 @@ pip install "pdarl[all]" # MuJoCo + W&B
 
 For other envs, see [**Gymnasium**](https://gymnasium.farama.org) for installation details.
 
+We included [**CleanRL**](https://github.com/vwxyzjn/cleanrl) style single-file RL script for `PDA_ACT` and `PDA_DSC` in folder `cleanrl_pda`. The files can be copied and ran directly when dependencies are installed.
+
 ## Quickstart
 
 Copy the `config` folder or create your own and train actor-accelerated PDA (default) with a config file:
