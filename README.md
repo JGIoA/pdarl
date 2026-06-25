@@ -15,7 +15,7 @@ The implementation follows [**Actor-Accelerated Policy Dual Averaging for Reinfo
 On-policy RL methods (e.g., TRPO, PPO) under the [**Policy Mirror Descent (PMD)**](https://arxiv.org/abs/2102.00135) framework regularize the new policy toward the *previous* iterate. PDA instead regularizes (through Bregman divergence $D(\cdot,\cdot)$ ) toward a fixed *prox-center* policy $\pi_0$ and accumulates *all* past advantages $\psi^{\pi_t}$ with weights $\beta_t$:
 
 $$
-\pi_{k+1}(s) = \arg\min_{a \in \mathcal{U}} \sum_{t=0}^{k} \beta_t \, \psi^{\pi_t}(s, a) + \lambda_k \, D\bigl(\pi_0(s), a\bigr).
+\pi_{k+1}(s) = \arg\min_{a \in \mathcal{U}} \sum_{t=0}^{k} \beta_t  \psi^{\pi_t}(s, a) + \lambda_k  D\bigl(\pi_0(s), a\bigr).
 $$
 
 <!-- This design makes subproblems weakly convex and removes the need to parameterize the policy at all. Under exact advantages, PDA matches PMD's guarantees (linear rate, $O(\epsilon^{-2})$ sample complexity, $O(\epsilon^{-1})$ with strongly convex regularizers). -->
